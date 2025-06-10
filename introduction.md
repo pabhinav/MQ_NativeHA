@@ -1,4 +1,4 @@
-           **MQ Native HA For Container environments for MQ Containers on AWS or CP4I on OpenShift**
+**MQ Native HA For Container environments for MQ Containers on AWS or CP4I on OpenShift**
 
 **Introduction**: This article demonstrates how to architect Native HA using IBM MQ Container, or IBM MQ Operators using CP4I. 
 A Native HA configuration consists of three Kubernetes pods, each with an instance of the queue manager. One instance is the active queue manager, processing messages and writing to its recovery log. Whenever the recovery log is written, the active queue manager sends the data to the other two instances, known as replicas. Each replica writes to its own recovery log, acknowledges the data, and then updates its own queue data from the replicated recovery log. If the pod running the active queue manager fails, one of the replica instances of the queue manager takes over the active role and has current data to operate with.
