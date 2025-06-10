@@ -17,6 +17,7 @@ As soon as the active queue manager goes down, one of the replica Queue Manager 
 Native HA - IBM Documentation
 
 What mechanism is used by IBM MQ to find a quorum?
+
 To maintain the quorum minimum two IBM MQ qmgr instance  should be available. 
 
 What mechanism is used by IBM MQ to replicate the recovery data between the active pod and the standby pods?
